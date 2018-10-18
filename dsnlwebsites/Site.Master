@@ -1,0 +1,192 @@
+﻿<%@ Master Language="VB" AutoEventWireup="true" CodeBehind="Site.master.vb" Inherits="dsnlwebsites.SiteMaster" %>
+
+<%@ Import Namespace="dsnlwebsites" %>
+<%@ Import Namespace="Microsoft.AspNet.Identity" %>
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %>:: Data Sciences Nigeria Ltd</title>
+    
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>`
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <style type="text/css">
+        .auto-style1 {
+            font-size: large;
+        }
+    
+        .style1
+        {
+            font-family: "Times New Roman", Times, serif;
+        }
+        </style>
+
+    </head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="respond" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+        
+        <div class="navbar navbar-inverse navbar-fixed-top" style="background-color: #004080; height: 75px; background-image: url('/Images/menubk3.jpg');">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" runat="server" href="~/default.aspx">
+                        <asp:Image ID="Image1" runat="server" Height="40px" ImageAlign="Middle" ImageUrl="~/Images/ds_logo2.jpg" Width="96px" />
+                        &nbsp;<asp:Label ID="Label1" runat="server" Font-Names="Forte" Font-Size="X-Large" ForeColor="White" Text="Data Sciences Nigeria Ltd"></asp:Label>
+                     
+                        <br />
+                     
+                        <asp:Label ID="Label66" runat="server" Font-Names="MV Boli" Font-Size="X-Small" ForeColor="White" Text="                                      ..Commited to Indigenous Expertise"></asp:Label>
+                    </a>&nbsp
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <p>
+                        </p>
+                        <li><a runat="server" href="~/"></a></li>
+                        <li><a runat="server" style="background-color: #b54e05" href="~/">Home</a></li>
+                        <li><a runat="server" style="background-color: #004080" href="~/About">About Us</a></li>
+                        <li class="dropdown">
+                            <a style="background-color: #004080" href="service" class="dropdown-toggle" data-toggle="dropdown">Services<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a runat="server" href="~/service">Services We Offer </a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a runat="server" href="~/spraparation">Computer Site Preparation </a></li>
+                                <li><a runat="server" href="~/mservice">Maintenence Service</a></li>
+                                <li><a runat="server" href="~/training">IT Training</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a runat="server" href="~/ourproduct">Our Product/Partners</a></li>
+                            </ul>
+                            <li><a style="background-color: #004080" runat="server" href="~/managementteam">Management Team</a></li>
+                        <li><a style="background-color: #004080" runat="server" href="~/clientel.aspx">Clientele</a></li>
+                        <li><a style="background-color: #004080" runat="server" href="~/Contact">Contact Us</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer style="background-color: #004080; width: 1170px; height: 305px; background-image: url('/Images/menubk3.jpg');">
+                <div style="background-color: #004080; height: 294px; background-image: url('/Images/menubk3.jpg');">
+                    <div style="height: 50px">
+                        <p style="border-bottom: thin ridge #FFFFFF; color: #FFFFFF; height: 28px; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:Label ID="Signinname" runat="server" Font-Size="X-Small" Text="Welcome: "></asp:Label>
+                            
+                        </p>
+                    </div>
+                    <div style="border: thin ridge #FFFFFF; width: 266px; height: 138px; margin-left: 20px; color: #FFFFFF;" class="text-center">
+                        &nbsp;<strong><span class="auto-style1">Abuja Office<br />
+                        </span></strong>Data SCiences Nigeria Limited 1, Niamey/Oagadougou Street, Off, Michael Opara Street Zone 2, Wuse, Abuja Tel/Fax: <span class="skype_pnh_container" dir="ltr" onmouseout="SkypeClick2Call.MenuInjectionHandler.hideMenu(event)" onmouseover="SkypeClick2Call.MenuInjectionHandler.showMenu(this, event)" skype_menu_props="{'numberToCall':'+23495234678' , 'isFreecall':false, 'isMobile':false, 'isRtl':false}" tabindex="-1"><span class="skype_pnh_highlighting_inactive_common" dir="ltr" skypeaction="skype_dropdown"><span class="skype_pnh_textarea_span"><span class="skype_pnh_text_span">+234 (0)905234678</span></span></span></span><br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+                    <div style="border: thin ridge #FFFFFF; width: 266px; margin-left: 300px; margin-top: -142px; height: 138px; color: #FFFFFF;" class="text-center">
+                        <span class="auto-style1"><strong>LAGOS (Headquarters) 
+                        <br />
+                        </strong></span>Data Sciences Nigeria Limited Obodex House,237, Ikorodu Road, Ilupeju, Lagos. Tel. <span class="skype_pnh_container" dir="ltr" onmouseout="SkypeClick2Call.MenuInjectionHandler.hideMenu(event)" onmouseover="SkypeClick2Call.MenuInjectionHandler.showMenu(this, event)" skype_menu_props="{'numberToCall':'+23414933369' , 'isFreecall':false, 'isMobile':false, 'isRtl':false}" tabindex="-1"><span class="skype_pnh_highlighting_inactive_common" dir="ltr" skypeaction="skype_dropdown"><span class="skype_pnh_textarea_span"><span class="skype_pnh_text_span"><b><span lang="EN-US"><span class="style1">+234 (0)802 302 3933; +234 1 8947629; +234 (0)<span class="style1" lang="EN-US" style="line-height: 115%">8059856364<o:p></o:p></span></span></span></b></span></span></span></span>.<br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+                    <div style="border: thin ridge #FFFFFF; width: 266px; margin-left: 580px; margin-top: -142px; height: 138px; color: #FFFFFF; " class="text-center">
+                        <strong><span class="auto-style1">Port Harcourt Office 
+                        <br />
+                        </span></strong>Data SCiences Nigeria Limited Coconut Estate, Off Trans- Amadi Layout Nkporgu Village Port Harcourt, Rivers State Tel/Fax: +234 (0)8033402999<br />
+                        <br />
+                        <br />
+                        <div style="width: 646px; margin-left: -100px; margin-top: 18px">
+                                    <asp:HyperLink ID="HyperLink1" runat="server" ForeColor="White" NavigateUrl="~/default.aspx">Home</asp:HyperLink>
+                                    &nbsp;<asp:Label ID="Label68" runat="server" ForeColor="White" Text="|"></asp:Label>
+&nbsp;<asp:HyperLink ID="HyperLink5" runat="server" ForeColor="White" NavigateUrl="~/about.aspx">About Us</asp:HyperLink>
+                                    &nbsp;<asp:Label ID="Label69" runat="server" ForeColor="White" Text="|"></asp:Label>
+&nbsp;<asp:HyperLink ID="HyperLink6" runat="server" ForeColor="White" NavigateUrl="~/service.aspx">Our Services</asp:HyperLink>
+                                    &nbsp;<asp:Label ID="Label70" runat="server" ForeColor="White" Text="|"></asp:Label>
+&nbsp;<asp:HyperLink ID="HyperLink7" runat="server" ForeColor="White" NavigateUrl="~/managementteam.aspx">Management Team</asp:HyperLink>
+                                    &nbsp;<asp:Label ID="Label71" runat="server" ForeColor="White" Text="|"></asp:Label>
+&nbsp;<asp:HyperLink ID="HyperLink8" runat="server" ForeColor="White" NavigateUrl="~/clientel.aspx">Clientel</asp:HyperLink>
+                                    &nbsp;<asp:Label ID="Label72" runat="server" ForeColor="White" Text="|"></asp:Label>
+&nbsp;<asp:HyperLink ID="HyperLink9" runat="server" ForeColor="White" NavigateUrl="~/contact.aspx">Contact Us</asp:HyperLink>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <asp:HyperLink ID="HyperLink10" runat="server" ForeColor="White" Font-Size="X-Small" NavigateUrl="~/default.aspx">Admin Login </asp:HyperLink>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </div>
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+                    <div style="width: 262px; margin-left: 865px; margin-top: -150px; height: 162px;">
+                        &nbsp;&nbsp;
+                        <asp:Label ID="Label67" runat="server" ForeColor="White" Text="Our Partners:" style="font-weight: 700"></asp:Label>
+                        <br />
+                        <br />
+                        &nbsp;<asp:Image ID="Image2" runat="server" Height="40px" ImageUrl="~/Images/drs.jpg" Width="94px" />
+&nbsp; <asp:Image ID="Image3" runat="server" Height="40px" ImageUrl="~/Images/hp.jpg" Width="98px" />
+                        <br />
+                        <br />
+&nbsp;<asp:Image ID="Image4" runat="server" Height="40px" ImageUrl="~/Images/panda.jpg" Width="94px" />
+&nbsp; <asp:Image ID="Image5" runat="server" Height="40px" ImageUrl="~/Images/Cabinet.jpg" Width="97px" />
+                        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:HyperLink ID="HyperLink4" runat="server" ForeColor="White" Font-Size="X-Small" NavigateUrl="~/ourproduct.aspx">More here...</asp:HyperLink>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+                    <div style="border-top: thin ridge #CCCCCC; color: #FFFFFF; border-left-color: #CCCCCC; border-left-width: thin; border-right-color: #CCCCCC; border-right-width: thin; border-bottom-color: #CCCCCC; border-bottom-width: thin; margin-top: 45px;">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Label ID="Label2" runat="server" Font-Size="X-Small" Text="All Right Reserved" ForeColor="White"></asp:Label>
+&nbsp; &copy; <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>&nbsp;<asp:Label ID="Label3" runat="server" Font-Size="X-Small" Text="Data Sciences Nigeria Ltd | Powered by: DSNL" ForeColor="White"></asp:Label>
+                        <br />
+                    </div>
+                    <br />
+                </div>
+            </footer>
+        </div>
+    </form>
+</body>
+</html>
